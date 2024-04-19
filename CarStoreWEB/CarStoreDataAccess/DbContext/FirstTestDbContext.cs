@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using CarStoreDataAccess.JsonUtilities;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
-namespace CarStoreWEB.EntityModels;
+namespace CarStoreWEB.FirstTestDbContext;
 
 public partial class FirstTestDbContext : DbContext
 {
@@ -23,8 +22,8 @@ public partial class FirstTestDbContext : DbContext
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql(JsonParser.GetConnectionStr(@"..\ConnectionString.json"), 
-            Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.3.0-mysql"));
+        => optionsBuilder.UseMySql(JsonParser.GetConnectionStr(@"..\ConnectionString.json"),
+            ServerVersion.Parse("8.3.0-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -36,5 +35,5 @@ public partial class FirstTestDbContext : DbContext
     }
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-    
+
 }
