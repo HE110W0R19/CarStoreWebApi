@@ -42,7 +42,7 @@ namespace CarStoreWEB.Controllers
 
             await _caveService.Create(car);
 
-            return new ActionResult<string>(request.Name);
+            return new ActionResult<string>(car.Id.ToString());
         }
 
         [HttpPut("{id:guid}")]
