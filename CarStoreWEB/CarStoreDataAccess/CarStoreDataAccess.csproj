@@ -10,4 +10,9 @@
     <ProjectReference Include="..\CarStoreWEB\CarStoreWEB.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="DbContext\" />
+  </ItemGroup>
+
 </Project>

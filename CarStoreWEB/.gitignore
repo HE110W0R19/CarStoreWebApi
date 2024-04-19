@@ -9,6 +9,9 @@
 # Docker files
 Dockerfile
 
+# My file, where i safe my connection string
+ConnectionString.*
+
 # Application settings
 appsettings*.*
 
