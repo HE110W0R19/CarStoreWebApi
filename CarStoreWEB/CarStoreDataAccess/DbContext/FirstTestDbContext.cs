@@ -20,7 +20,7 @@ public partial class FirstTestDbContext : DbContext
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql(JsonParser.GetConnectionStr(@"..\ConnectionString.json"),
+        => optionsBuilder.UseMySql(JsonParser.GetConnectionStr("ConnectionString.json"),
             ServerVersion.Parse("8.3.0-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

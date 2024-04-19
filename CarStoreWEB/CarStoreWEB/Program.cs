@@ -1,4 +1,6 @@
+using CarStoreApplication.Services;
 using CarStoreDataAccess.TestDbContext;
+using CarStoreDataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,9 @@ builder.Services.AddDbContext<FirstTestDbContext>(
             , ServerVersion.AutoDetect(builder.Configuration.GetConnectionString(nameof(FirstTestDbContext)))
             , null);
     });
+
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 
 var app = builder.Build();
 
