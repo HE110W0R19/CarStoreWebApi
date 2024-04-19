@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarStoreCore", "CarStoreCor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarStoreDataAccess", "CarStoreDataAccess\CarStoreDataAccess.csproj", "{58DDF94E-107B-43FF-9E80-20EDEA84B590}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarStoreApplication", "CarStoreApplication\CarStoreApplication.csproj", "{A4FEA93D-2B06-46D5-BAD9-C6405A5C1FF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{58DDF94E-107B-43FF-9E80-20EDEA84B590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58DDF94E-107B-43FF-9E80-20EDEA84B590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58DDF94E-107B-43FF-9E80-20EDEA84B590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FEA93D-2B06-46D5-BAD9-C6405A5C1FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FEA93D-2B06-46D5-BAD9-C6405A5C1FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FEA93D-2B06-46D5-BAD9-C6405A5C1FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FEA93D-2B06-46D5-BAD9-C6405A5C1FF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

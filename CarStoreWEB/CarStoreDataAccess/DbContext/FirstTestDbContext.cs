@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
-using CarStoreDataAccess.JsonUtilities;
+﻿using CarStoreDataAccess.EntityModels;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
-namespace CarStoreWEB.FirstTestDbContext;
+namespace CarStoreDataAccess.TestDbContext;
 
 public partial class FirstTestDbContext : DbContext
 {
     //Connection String getter
-    private readonly JsonUtilities JsonParser = new JsonUtilities();
+    private readonly JsonUtilities.JsonUtilities JsonParser = new JsonUtilities.JsonUtilities();
+
+    public DbSet<CarEntity> Cars { get; set; }
 
     public FirstTestDbContext()
     {

@@ -1,12 +1,7 @@
-﻿using CarStoreDataAccess.EntityModels;
+﻿using CarStoreCore.Models;
+using CarStoreDataAccess.EntityModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarStoreDataAccess.Configurations
 {
@@ -14,7 +9,22 @@ namespace CarStoreDataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<CarEntity> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(c => c.Id);
+            
+            builder.Property(c => c.Name)
+                .HasMaxLength(Car.MAX_NAME_LENGTH)
+                .IsRequired();
+
+            builder.Property(c => c.Model)
+                .HasMaxLength(Car.MAX_MODEL_LENGTH)
+                .IsRequired();
+
+            builder.Property(c => c.Description)
+                .HasMaxLength(Car.MAX_DISCRIPTION_LENGTH);
+
+            builder.Property(c => c.Price)
+                .IsRequired();
+
         }
     }
 }
